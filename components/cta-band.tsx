@@ -14,8 +14,8 @@ export function CtaBand() {
             Stop by today — fresh food is waiting
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-pretty text-primary-foreground/85">
-            Dine in, grab curbside pickup, or order delivery. Open early for
-            breakfast and serving Brazilian favorites all day long.
+            Dine in, grab takeout, or order delivery. Open Tuesday through Sunday
+            serving authentic Mexican favorites all day long.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a

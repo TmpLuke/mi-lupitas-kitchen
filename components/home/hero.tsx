@@ -23,7 +23,7 @@ export function Hero() {
       <motion.div style={{ scale }} className="absolute inset-0">
         <Image
           src="/images/photo_01.jpg"
-          alt="Minas Grill bakery counter with fresh bread"
+          alt="Mi Lupita's Kitchen — authentic Mexican food in Red Bank, NJ"
           fill
           priority
           className="object-cover"
@@ -44,7 +44,7 @@ export function Hero() {
           className="flex items-center gap-4 pt-20 text-xs font-medium uppercase tracking-[0.3em] text-primary"
         >
           <span className="h-px w-12 bg-primary" />
-          Brazilian Comfort Food
+          Authentic Mexican Kitchen
         </motion.div>
 
         {/* Center: Giant stacked typography */}
@@ -56,7 +56,7 @@ export function Hero() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 1, ease: [0.33, 1, 0.68, 1] }}
             >
-              Minas
+              Mi
             </motion.span>
             <motion.span
               className="block text-primary"
@@ -64,7 +64,7 @@ export function Hero() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.4, duration: 1, ease: [0.33, 1, 0.68, 1] }}
             >
-              Grill
+              Lupita&apos;s
             </motion.span>
           </h1>
 
@@ -74,8 +74,8 @@ export function Hero() {
             transition={{ delay: 0.9, duration: 0.8 }}
             className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground md:text-lg"
           >
-            Where every dish tells the story of Minas Gerais.
-            Handcrafted with love since 2015.
+            Where every dish tells the story of Mexico.
+            Handmade tortillas, bold flavors, and a warm welcome.
           </motion.p>
 
           <motion.div
@@ -108,7 +108,7 @@ export function Hero() {
           className="flex items-end justify-between pb-4"
         >
           <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
-            Est. 2015 — Eatontown, NJ
+            Red Bank, NJ
           </div>
           <motion.button
             onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}

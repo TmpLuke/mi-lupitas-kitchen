@@ -23,7 +23,7 @@ export function Footer() {
           viewport={{ once: true }}
           className="font-heading text-[clamp(4rem,20vw,16rem)] font-light leading-none tracking-tight text-foreground/5"
         >
-          Minas Grill
+          Mi Lupita&apos;s
         </motion.div>
       </div>
 
@@ -33,11 +33,11 @@ export function Footer() {
           {/* Column 1: Brand */}
           <div>
             <Link href="/" className="font-heading text-2xl font-light">
-              Minas<span className="text-primary">.</span>
+              Lupita&apos;s<span className="text-primary">.</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Authentic Brazilian comfort food, fresh-baked breads, and a beloved market
-              — made fresh daily.
+              Authentic Mexican flavors in Red Bank, NJ — handmade tortillas, sizzling fajitas,
+              birria tacos and more. BYOB welcome.
             </p>
             <div className="mt-6 flex gap-3">
               <a
@@ -97,8 +97,8 @@ export function Footer() {
                 </a>
               </p>
               <p className="text-muted-foreground">
-                Mon–Sat: 7am – 7pm<br />
-                Sunday: 8am – 5pm
+                Tue–Sun: 10am – 10pm<br />
+                Monday: Closed
               </p>
               <a
                 href={business.directions}
@@ -117,7 +117,7 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="flex flex-col items-center justify-between gap-4 px-5 py-6 text-xs text-muted-foreground md:flex-row md:px-12 lg:px-20">
           <p>© {new Date().getFullYear()} {business.name}. All rights reserved.</p>
-          <p>Eatontown, NJ · {business.rating}★ from {business.reviewCount} reviews</p>
+          <p>Red Bank, NJ · {business.rating}★ from {business.reviewCount} reviews</p>
         </div>
       </div>
     </footer>

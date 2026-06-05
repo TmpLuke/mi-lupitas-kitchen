@@ -1,12 +1,12 @@
 import { Reveal } from '@/components/reveal'
 import { CountUp } from '@/components/count-up'
-import { Croissant, Soup, Store, Sun } from 'lucide-react'
+import { UtensilsCrossed, Wine, Music, TreePalm } from 'lucide-react'
 
 const features = [
-  { icon: Sun, label: 'Open early', sub: 'Breakfast from 4:30 AM' },
-  { icon: Soup, label: 'Hot food bar', sub: 'Changes fresh daily' },
-  { icon: Croissant, label: 'In-house bakery', sub: 'Breads & sweets' },
-  { icon: Store, label: 'Brazilian market', sub: 'Groceries & drinks' },
+  { icon: UtensilsCrossed, label: 'Dine In & Takeout', sub: 'Delivery available too' },
+  { icon: Wine, label: 'BYOB Friendly', sub: 'Bring your own drinks' },
+  { icon: Music, label: 'Live Music', sub: 'Seasonal outdoor events' },
+  { icon: TreePalm, label: 'Outdoor Seating', sub: 'Al fresco dining' },
 ]
 
 export function AboutTeaser() {
@@ -18,19 +18,18 @@ export function AboutTeaser() {
             Our Story
           </p>
           <h2 className="mt-3 text-balance font-heading text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-            A little piece of Brazil, made fresh every day
+            A taste of Mexico, made fresh every day
           </h2>
           <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
-            Minas Grill &amp; Market is a warm, family-run spot where the
-            empanadas are golden, the rice and beans are generous, and the
-            bread is baked in-house. Part grill, part bakery, part Brazilian
-            market — there&apos;s always a friendly face and a fresh tray
-            waiting.
+            Mi Lupita&apos;s Kitchen is a warm, family-run spot where the
+            tortillas are handmade fresh daily, the birria is slow-braised
+            to perfection, and every salsa is made from scratch. There&apos;s
+            always a friendly face and a bold, authentic dish waiting.
           </p>
           <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-            From early-morning breakfast sandwiches on fresh Portuguese rolls
-            to a hot lunch buffet that changes daily, everything is made with
-            care and served with a smile.
+            From our nixtamalized handmade tortillas to slow-cooked caldos
+            and sizzling parrilladas, everything is made with care, tradition,
+            and a whole lot of love.
           </p>
 
           <div className="mt-8 grid grid-cols-3 gap-4">
@@ -42,7 +41,7 @@ export function AboutTeaser() {
             </div>
             <div>
               <p className="font-heading text-3xl font-bold text-primary sm:text-4xl">
-                <CountUp to={153} suffix="+" />
+                <CountUp to={446} suffix="+" />
               </p>
               <p className="mt-1 text-sm text-muted-foreground">Happy reviews</p>
             </div>
@@ -60,14 +59,14 @@ export function AboutTeaser() {
             <div className="overflow-hidden rounded-3xl">
               <img
                 src="/images/photo_01.jpg"
-                alt="Fresh-baked breads, pastries and donuts inside Minas Grill & Market"
+                alt="Authentic Mexican dishes at Mi Lupita's Kitchen in Red Bank, NJ"
                 className="aspect-[4/5] w-full object-cover"
               />
             </div>
             <div className="absolute -bottom-6 -left-4 hidden w-44 overflow-hidden rounded-2xl border-4 border-background shadow-xl sm:block lg:-left-8 lg:w-52">
               <img
                 src="/images/photo_07.jpg"
-                alt="Golden fried risoles with shredded chicken"
+                alt="Freshly made tacos and salsas at Mi Lupita's Kitchen"
                 className="aspect-square w-full object-cover"
               />
             </div>

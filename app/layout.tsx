@@ -19,23 +19,24 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Minas Grill & Market | Authentic Brazilian Food in Eatontown, NJ',
+  title: "Mi Lupita's Kitchen | Authentic Mexican Restaurant in Red Bank, NJ",
   description:
-    'Minas Grill & Market serves authentic Brazilian street food, fresh-baked breads, hot lunch specials, combos and groceries in Eatontown, NJ. Rated 4.8 stars from 153 reviews.',
+    "Mi Lupita's Kitchen serves authentic Mexican food in Red Bank, NJ — handmade tortillas, birria tacos, enchiladas, fajitas, and more. Rated 4.8 stars from 446 reviews. BYOB & outdoor seating.",
   generator: 'v0.app',
   keywords: [
-    'Brazilian restaurant',
-    'Eatontown NJ',
-    'Brazilian food',
-    'empanadas',
-    'pao de queijo',
-    'Minas Grill',
-    'Brazilian market',
+    'Mexican restaurant',
+    'Red Bank NJ',
+    'authentic Mexican food',
+    'birria tacos',
+    'enchiladas',
+    "Mi Lupita's Kitchen",
+    'BYOB restaurant',
+    'handmade tortillas',
   ],
   openGraph: {
-    title: 'Minas Grill & Market | Authentic Brazilian Food',
+    title: "Mi Lupita's Kitchen | Authentic Mexican Food in Red Bank, NJ",
     description:
-      'Authentic Brazilian street food, fresh bakery, hot lunch specials and a Brazilian market in Eatontown, NJ.',
+      "Handmade tortillas, birria tacos, sizzling fajitas and fresh Mexican flavors in Red Bank, NJ. BYOB & outdoor seating available.",
     type: 'website',
   },
 }

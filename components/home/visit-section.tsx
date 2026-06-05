@@ -13,7 +13,7 @@ export function VisitSection() {
       <div className="absolute inset-0">
         <Image
           src="/images/photo_08.jpg"
-          alt="Minas soup with meatballs"
+          alt="Authentic Mexican food at Mi Lupita's Kitchen"
           fill
           className="object-cover"
         />
@@ -73,8 +73,8 @@ export function VisitSection() {
                   Hours
                 </div>
                 <div className="mt-1 text-foreground">
-                  Mon–Sat: 7am – 7pm<br />
-                  Sunday: 8am – 5pm
+                  Tue–Sun: 10am – 10pm<br />
+                  Monday: Closed
                 </div>
               </div>
             </div>
@@ -132,7 +132,7 @@ export function VisitSection() {
               M
             </div>
             <div className="-mt-8 font-heading text-2xl font-light tracking-[0.5em] text-foreground">
-              MINAS
+              LUPITA&apos;S
             </div>
           </motion.div>
         </div>

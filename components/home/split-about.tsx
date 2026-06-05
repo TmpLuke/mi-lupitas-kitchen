@@ -36,14 +36,14 @@ export function SplitAbout() {
 
             <div className="mt-8 space-y-6 text-muted-foreground">
               <p className="text-base leading-relaxed md:text-lg">
-                Born in Minas Gerais, Brazil, we brought the authentic flavors of our homeland
-                to New Jersey. Every recipe carries generations of tradition — from our famous
-                pão de queijo to slow-cooked stews that warm the soul.
+                Rooted in Mexican tradition, Mi Lupita&apos;s Kitchen brings the real flavors of
+                Mexico to Red Bank, NJ. Every recipe carries generations of family tradition —
+                from our nixtamalized handmade tortillas to slow-braised birria that warms the soul.
               </p>
               <p className="text-base leading-relaxed md:text-lg">
-                Our bakery counter overflows with fresh bread daily. Our grill sizzles with
-                perfectly seasoned meats. And our market shelves stock the ingredients that
-                make Brazilian cuisine unforgettable.
+                Our handmade tortillas are pressed fresh every day. Our grill sizzles with
+                perfectly seasoned carne asada, al pastor and chorizo. And our kitchen fills
+                the room with the aromas that make Mexican cuisine unforgettable.
               </p>
             </div>
 
@@ -74,9 +74,9 @@ export function SplitAbout() {
             className="mt-16 grid grid-cols-3 gap-8 border-t border-border pt-8"
           >
             {[
-              { value: '9+', label: 'Years Serving' },
+              { value: '446+', label: 'Google Reviews' },
               { value: '50+', label: 'Menu Items' },
-              { value: '4.7', label: 'Google Rating' },
+              { value: '4.8', label: 'Google Rating' },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="font-heading text-3xl font-light text-primary md:text-4xl">
@@ -110,8 +110,8 @@ export function SplitAbout() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="absolute -bottom-8 -left-8 bg-primary p-8 text-primary-foreground md:p-12"
             >
-              <div className="font-heading text-5xl font-light md:text-6xl">2015</div>
-              <div className="mt-2 text-sm uppercase tracking-wider">Est.</div>
+              <div className="font-heading text-5xl font-light md:text-6xl">4.8★</div>
+              <div className="mt-2 text-sm uppercase tracking-wider">Google</div>
             </motion.div>
           </motion.div>
         </div>

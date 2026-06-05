@@ -27,7 +27,7 @@ export function GalleryHero() {
         transition={{ delay: 0.5 }}
         className="mt-4 max-w-lg text-base text-muted-foreground md:text-lg"
       >
-        Fresh bakery, sizzling grills and Brazilian favorites — take a look at what awaits you.
+        Handmade tortillas, sizzling grills and authentic Mexican flavors — take a look at what awaits you.
       </motion.p>
     </section>
   )

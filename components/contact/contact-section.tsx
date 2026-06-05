@@ -82,7 +82,7 @@ export function ContactSection() {
                         }`}
                       >
                         <span>{h.day}</span>
-                        <span>{h.open} – {h.close}</span>
+                        <span>{h.open ? `${h.open} – ${h.close}` : 'Closed'}</span>
                       </li>
                     )
                   })}
@@ -147,7 +147,7 @@ export function ContactSection() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Minas Grill & Market location"
+              title="Mi Lupita's Kitchen location"
               className="grayscale"
             />
           </motion.div>

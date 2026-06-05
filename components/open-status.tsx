@@ -22,7 +22,7 @@ export function useOpenStatus() {
       const dow = now.getDay()
       const mins = now.getHours() * 60 + now.getMinutes()
       const today = hours.find((h) => h.dow === dow)
-      if (!today) return setStatus({ open: false, label: 'Closed today' })
+      if (!today || !today.open || !today.close) return setStatus({ open: false, label: 'Closed today' })
       const o = parse(today.open)
       const c = parse(today.close)
       if (mins >= o && mins < c) {

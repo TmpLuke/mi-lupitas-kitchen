@@ -56,7 +56,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="relative z-10 flex items-center gap-2">
             <span className="font-heading text-xl font-light tracking-tight text-foreground md:text-2xl">
-              Minas<span className="text-primary">.</span>
+              Lupita&apos;s<span className="text-primary">.</span>
             </span>
           </Link>
 

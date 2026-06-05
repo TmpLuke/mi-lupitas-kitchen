@@ -12,7 +12,7 @@ export function VisitTeaser() {
           <Reveal>
             <div className="overflow-hidden rounded-3xl border border-border shadow-sm">
               <iframe
-                title="Map to Minas Grill & Market"
+                title="Map to Mi Lupita's Kitchen"
                 src={business.mapEmbed}
                 className="h-80 w-full lg:h-full lg:min-h-[26rem]"
                 loading="lazy"
@@ -26,7 +26,7 @@ export function VisitTeaser() {
               Visit Us
             </p>
             <h2 className="mt-3 text-balance font-heading text-3xl font-bold sm:text-4xl">
-              Find us in Eatontown
+              Find us in Red Bank
             </h2>
             <OpenBadge className="mt-4" />
 
@@ -81,7 +81,7 @@ export function VisitTeaser() {
                     >
                       <span>{h.day}</span>
                       <span>
-                        {h.open} – {h.close}
+                        {h.open ? `${h.open} – ${h.close}` : 'Closed'}
                       </span>
                     </li>
                   ))}
