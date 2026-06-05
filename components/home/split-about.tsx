@@ -90,11 +90,11 @@ export function SplitAbout() {
           </motion.div>
         </div>
 
-        {/* Right: Image with parallax */}
+        {/* Right: Image with parallax + floating cards */}
         <div className="relative px-5 md:px-12 lg:px-0">
           <motion.div
             style={{ y: imageY }}
-            className="relative aspect-[3/4] overflow-hidden lg:aspect-auto lg:h-[80vh]"
+            className="relative aspect-[3/4] overflow-hidden lg:aspect-auto lg:h-[82vh]"
           >
             <Image
               src="/images/photo_09.jpg"
@@ -102,16 +102,31 @@ export function SplitAbout() {
               fill
               className="object-cover"
             />
-            {/* Floating accent box */}
+            {/* Floating rating badge */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="absolute -bottom-8 -left-8 bg-primary p-8 text-primary-foreground md:p-12"
+              transition={{ delay: 0.4, duration: 0.7 }}
+              className="absolute -bottom-6 -left-4 bg-primary p-7 text-primary-foreground md:-left-8 md:p-10"
             >
               <div className="font-heading text-5xl font-light md:text-6xl">4.8★</div>
-              <div className="mt-2 text-sm uppercase tracking-wider">Google</div>
+              <div className="mt-1.5 text-xs uppercase tracking-[0.2em]">on Google</div>
+            </motion.div>
+
+            {/* Floating mini photo card — top right */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, duration: 0.7 }}
+              className="absolute right-4 top-8 hidden w-36 overflow-hidden border-4 border-background shadow-2xl sm:block md:w-44"
+            >
+              <img
+                src="/images/photo_06.jpg"
+                alt="Fresh guacamole at Mi Lupita's Kitchen"
+                className="aspect-square w-full object-cover"
+              />
             </motion.div>
           </motion.div>
         </div>

@@ -1,40 +1,65 @@
-import { Phone, Navigation } from 'lucide-react'
+import { Phone, Navigation, ExternalLink } from 'lucide-react'
 import { business } from '@/lib/data'
 import { Reveal } from '@/components/reveal'
 
 export function CtaBand() {
   return (
-    <section className="grain relative overflow-hidden bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-20">
+    <section className="relative overflow-hidden bg-primary text-primary-foreground">
+      {/* Subtle diagonal stripe pattern */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage:
+            'repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 0, transparent 50%)',
+          backgroundSize: '20px 20px',
+        }}
+      />
+
+      <div className="relative mx-auto max-w-7xl px-5 py-20 text-center sm:px-6 sm:py-24">
         <Reveal>
-          <p className="font-heading text-sm font-medium uppercase tracking-[0.2em] text-primary-foreground/70">
-            Hungry yet?
+          <p className="text-xs font-medium uppercase tracking-[0.35em] text-primary-foreground/60">
+            Come visit us
           </p>
-          <h2 className="mt-3 text-balance font-heading text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Stop by today — fresh food is waiting
+          <h2 className="mt-4 text-balance font-heading text-4xl font-light leading-tight sm:text-5xl lg:text-6xl">
+            Hungry? We&apos;re ready<br className="hidden sm:block" /> when you are.
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-pretty text-primary-foreground/85">
-            Dine in, grab takeout, or order delivery. Open Tuesday through Sunday
-            serving authentic Mexican favorites all day long.
+          <p className="mx-auto mt-5 max-w-lg text-pretty text-primary-foreground/75 md:text-lg">
+            Dine in, takeout or delivery — open Tuesday through Sunday.
+            BYOB welcome. Outdoor seating available.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a
               href={business.phoneHref}
-              className="inline-flex items-center gap-2 rounded-full bg-background px-7 py-3.5 text-base font-semibold text-foreground transition-transform hover:-translate-y-0.5 active:scale-95"
+              className="group inline-flex items-center gap-3 rounded-full bg-primary-foreground px-8 py-4 text-sm font-semibold text-primary transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
             >
-              <Phone width={18} height={18} className="text-primary" />
+              <Phone className="h-4 w-4" />
               {business.phone}
             </a>
             <a
               href={business.directions}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 px-7 py-3.5 text-base font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 active:scale-95"
+              className="group inline-flex items-center gap-3 rounded-full border border-primary-foreground/30 px-8 py-4 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:bg-primary-foreground/10 hover:scale-105 active:scale-95"
             >
-              <Navigation width={18} height={18} />
+              <Navigation className="h-4 w-4" />
               Get Directions
             </a>
           </div>
+
+          {/* Address line */}
+          <p className="mt-8 flex items-center justify-center gap-2 text-sm text-primary-foreground/50">
+            193 Shrewsbury Ave, Red Bank, NJ 07701
+            <a
+              href={business.directions}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open in maps"
+            >
+              <ExternalLink className="h-3.5 w-3.5 hover:text-primary-foreground transition-colors" />
+            </a>
+          </p>
         </Reveal>
       </div>
     </section>
