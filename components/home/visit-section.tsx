@@ -12,7 +12,7 @@ export function VisitSection() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/photo_08.jpg"
+          src="/images/photo_16.jpg"
           alt="Authentic Mexican food at Mi Lupita's Kitchen"
           fill
           className="object-cover"

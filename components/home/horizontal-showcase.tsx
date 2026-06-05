@@ -5,12 +5,12 @@ import Image from 'next/image'
 import { useRef } from 'react'
 
 const dishes = [
-  { image: '/images/photo_10.jpg', name: 'Birria Tacos', category: 'Signature' },
-  { image: '/images/photo_03.jpg', name: 'Enchiladas', category: 'Classic' },
-  { image: '/images/photo_04.jpg', name: 'Carne Asada', category: 'From the Grill' },
+  { image: '/images/photo_04.jpg', name: 'Birria Tacos', category: 'Signature' },
+  { image: '/images/photo_08.jpg', name: 'Carne Asada', category: 'From the Grill' },
+  { image: '/images/photo_06.jpg', name: 'Guacamole', category: 'Fresh Daily' },
   { image: '/images/photo_05.jpg', name: 'Elote', category: 'Street Food' },
-  { image: '/images/photo_06.jpg', name: 'Loaded Fries', category: 'Crowd Favorite' },
-  { image: '/images/photo_07.jpg', name: 'Tamales', category: 'Handmade' },
+  { image: '/images/photo_07.jpg', name: 'Al Pastor', category: 'Classic' },
+  { image: '/images/photo_01.jpg', name: 'Full Spread', category: 'Feast' },
 ]
 
 function DishCard({ dish, i }: { dish: typeof dishes[0]; i: number }) {

@@ -60,7 +60,7 @@ export function TestimonialsSection() {
               ))}
             </div>
             <div className="mt-2 text-right">
-              <span className="font-heading text-3xl font-light">4.7</span>
+              <span className="font-heading text-3xl font-light">4.8</span>
               <span className="ml-2 text-sm text-muted-foreground">on Google</span>
             </div>
           </motion.div>
@@ -93,7 +93,7 @@ export function TestimonialsSection() {
                       ))}
                     </div>
                     <span>·</span>
-                    <span>{featured[current].source}</span>
+                    <span>{featured[current].date}</span>
                   </div>
                 </div>
               </div>

@@ -58,14 +58,14 @@ export function AboutTeaser() {
           <div className="relative">
             <div className="overflow-hidden rounded-3xl">
               <img
-                src="/images/photo_01.jpg"
+                src="/images/photo_09.jpg"
                 alt="Authentic Mexican dishes at Mi Lupita's Kitchen in Red Bank, NJ"
                 className="aspect-[4/5] w-full object-cover"
               />
             </div>
             <div className="absolute -bottom-6 -left-4 hidden w-44 overflow-hidden rounded-2xl border-4 border-background shadow-xl sm:block lg:-left-8 lg:w-52">
               <img
-                src="/images/photo_07.jpg"
+                src="/images/photo_04.jpg"
                 alt="Freshly made tacos and salsas at Mi Lupita's Kitchen"
                 className="aspect-square w-full object-cover"
               />

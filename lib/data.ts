@@ -29,25 +29,33 @@ export const hours = [
 ]
 
 export const photos = [
-  { src: '/images/photo_01.jpg', alt: 'Colorful Mexican dishes and fresh salsas at Mi Lupita\'s Kitchen' },
-  { src: '/images/photo_02.jpg', alt: 'Fresh pico de gallo and house-made guacamole with tortilla chips' },
-  { src: '/images/photo_03.jpg', alt: 'Sizzling chicken enchiladas topped with green sauce and crema' },
-  { src: '/images/photo_04.jpg', alt: 'Birria de res tacos served with rich consommé for dipping' },
+  { src: '/images/photo_01.jpg', alt: 'Colorful Mexican feast — a table full of authentic dishes at Mi Lupita\'s Kitchen' },
+  { src: '/images/photo_02.jpg', alt: 'Fresh food at Mi Lupita\'s Kitchen, Red Bank NJ' },
+  { src: '/images/photo_03.jpg', alt: 'Authentic Mexican dishes made fresh at Mi Lupita\'s Kitchen' },
+  { src: '/images/photo_04.jpg', alt: 'Birria de res tacos on handmade tortillas with fresh onion and cilantro' },
   { src: '/images/photo_05.jpg', alt: 'Elote — Mexican street corn grilled and topped with cotija and chili' },
-  { src: '/images/photo_06.jpg', alt: 'Loaded Mexican street fries with cheese, jalapeños and crema' },
-  { src: '/images/photo_07.jpg', alt: 'Carne asada and al pastor tacos on handmade tortillas' },
-  { src: '/images/photo_08.jpg', alt: 'Caldo de rez — hearty beef and vegetable soup served steaming hot' },
-  { src: '/images/photo_09.jpg', alt: 'Colorful enchilada tri-color platter with rice and beans' },
-  { src: '/images/photo_10.jpg', alt: 'Sizzling parrillada with steak, chicken, chorizo and shrimp' },
+  { src: '/images/photo_06.jpg', alt: 'House-made guacamole with fresh tortilla chips' },
+  { src: '/images/photo_07.jpg', alt: 'Tacos on handmade nixtamalized tortillas' },
+  { src: '/images/photo_08.jpg', alt: 'Carne asada — grilled and sliced with fresh salsas and tortillas' },
+  { src: '/images/photo_09.jpg', alt: 'Mi Lupita\'s Kitchen — warm and welcoming atmosphere in Red Bank, NJ' },
+  { src: '/images/photo_10.jpg', alt: 'Grilled meats — sizzling carne asada fresh off the grill' },
+  { src: '/images/photo_11.jpg', alt: 'Fresh authentic Mexican dishes at Mi Lupita\'s Kitchen' },
+  { src: '/images/photo_12.jpg', alt: 'Mi Lupita\'s Kitchen food — made fresh daily with traditional recipes' },
+  { src: '/images/photo_13.jpg', alt: 'Fresh ingredients and vibrant flavors at Mi Lupita\'s Kitchen' },
+  { src: '/images/photo_14.jpg', alt: 'Colorful authentic Mexican food — always made fresh' },
+  { src: '/images/photo_15.jpg', alt: 'Traditional Mexican dishes served with handmade tortillas' },
+  { src: '/images/photo_16.jpg', alt: 'A beautiful spread of Mexican food — perfect for groups' },
+  { src: '/images/photo_17.jpg', alt: 'Authentic tacos and Mexican street food at Mi Lupita\'s Kitchen' },
+  { src: '/images/photo_18.jpg', alt: 'Sizzling grill — fresh meats cooked to perfection' },
 ]
 
 export const favorites = [
   { name: 'Birria Tacos', mentions: 24, img: '/images/photo_04.jpg' },
-  { name: 'Guacamole & Chips', mentions: 18, img: '/images/photo_02.jpg' },
-  { name: 'Enchilada Tri-Color', mentions: 14, img: '/images/photo_09.jpg' },
+  { name: 'Guacamole & Chips', mentions: 18, img: '/images/photo_06.jpg' },
+  { name: 'Carne Asada', mentions: 14, img: '/images/photo_08.jpg' },
   { name: 'Elote Street Corn', mentions: 12, img: '/images/photo_05.jpg' },
-  { name: 'Camarones a la Diabla', mentions: 10, img: '/images/photo_10.jpg' },
-  { name: 'Loaded Street Fries', mentions: 9, img: '/images/photo_06.jpg' },
+  { name: 'Al Pastor Tacos', mentions: 10, img: '/images/photo_07.jpg' },
+  { name: 'Loaded Street Fries', mentions: 9, img: '/images/photo_01.jpg' },
 ]
 
 export type MenuItem = {

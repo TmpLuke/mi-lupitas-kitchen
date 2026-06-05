@@ -3,14 +3,16 @@
 import { motion } from 'framer-motion'
 
 const words = [
-  'Pão de Queijo',
-  'Coxinha',
-  'Fresh Bakery',
-  'Picanha',
-  'Pastel Frito',
-  'Rice & Beans',
-  'Hot Lunch',
-  'Empanadas',
+  'Birria Tacos',
+  'Handmade Tortillas',
+  'Carne Asada',
+  'Enchiladas',
+  'Elote',
+  'BYOB',
+  'Guacamole',
+  'Al Pastor',
+  'Live Music',
+  'Outdoor Seating',
 ]
 
 export function MarqueeBand() {
