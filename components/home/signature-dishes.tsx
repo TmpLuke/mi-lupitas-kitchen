@@ -6,24 +6,24 @@ import Link from 'next/link'
 
 const dishes = [
   {
-    name: 'Birria de Res',
+    name: 'Quesabirria',
     subtitle: 'Our most loved dish',
     desc: 'Slow-braised beef on nixtamalized handmade tortillas with rich consommé for dipping. The dish everyone comes back for.',
-    img: '/images/photo_04.jpg',
+    img: '/images/menu_quesabirria.jpg',
     tag: 'Signature',
   },
   {
     name: 'Carne Asada',
     subtitle: 'From the grill',
     desc: 'Perfectly seasoned skirt steak, grilled over open flame. Served with fresh handmade tortillas and house salsas.',
-    img: '/images/photo_08.jpg',
+    img: '/images/menu_carne_asada.jpg',
     tag: 'Fan Favorite',
   },
   {
-    name: 'Enchilada Tri-Color',
+    name: 'Enchiladas Mole',
     subtitle: 'A Mexican classic',
-    desc: 'Three enchiladas, three sauces — red chile, green tomatillo, and rich mole. A celebration of Mexican flavors.',
-    img: '/images/photo_01.jpg',
+    desc: 'Three enchiladas each in a rich, complex mole sauce. Made with dried chiles, chocolate and spices — a family recipe.',
+    img: '/images/menu_enchiladas_mole.jpg',
     tag: 'Must Try',
   },
 ]

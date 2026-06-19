@@ -26,7 +26,7 @@ export function TestimonialsSection() {
       {/* Background photo with overlay */}
       <div className="absolute inset-0">
         <Image
-          src="/images/photo_16.jpg"
+          src="/images/interior_06.jpg"
           alt=""
           fill
           className="object-cover"

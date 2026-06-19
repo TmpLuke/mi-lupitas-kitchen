@@ -22,7 +22,7 @@ export function Hero() {
       {/* Full-bleed background with parallax zoom */}
       <motion.div style={{ scale }} className="absolute inset-0">
         <Image
-          src="/images/photo_04.jpg"
+          src="/images/menu_hero.jpg"
           alt="Mi Lupita's Kitchen — authentic Mexican food in Red Bank, NJ"
           fill
           priority

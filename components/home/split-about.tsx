@@ -97,7 +97,7 @@ export function SplitAbout() {
             className="relative aspect-[3/4] overflow-hidden lg:aspect-auto lg:h-[82vh]"
           >
             <Image
-              src="/images/photo_09.jpg"
+              src="/images/interior_04.jpg"
               alt="Mi Lupita's Kitchen restaurant — authentic Mexican food in Red Bank, NJ"
               fill
               className="object-cover"
@@ -123,7 +123,7 @@ export function SplitAbout() {
               className="absolute right-4 top-8 hidden w-36 overflow-hidden border-4 border-background shadow-2xl sm:block md:w-44"
             >
               <img
-                src="/images/photo_06.jpg"
+                src="/images/menu_guacamole.jpg"
                 alt="Fresh guacamole at Mi Lupita's Kitchen"
                 className="aspect-square w-full object-cover"
               />
