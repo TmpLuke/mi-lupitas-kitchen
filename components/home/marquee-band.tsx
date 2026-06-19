@@ -7,7 +7,15 @@ const row2 = ['BYOB Friendly', 'Live Music', 'Outdoor Seating', 'Red Bank NJ', '
 
 export function MarqueeBand() {
   return (
-    <section className="overflow-hidden border-y border-border bg-card">
+    <section
+      className="overflow-hidden border-y border-border bg-card"
+      style={{
+        maskImage:
+          'linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)',
+        WebkitMaskImage:
+          'linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)',
+      }}
+    >
       {/* Row 1 — left */}
       <div className="border-b border-border/50 py-4 md:py-5">
         <div className="flex">

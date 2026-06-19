@@ -32,9 +32,9 @@ export function CtaBand() {
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a
               href={business.phoneHref}
-              className="group inline-flex items-center gap-3 rounded-full bg-primary-foreground px-8 py-4 text-sm font-semibold text-primary transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
+              className="tap-scale group inline-flex items-center gap-3 rounded-full bg-primary-foreground px-8 py-4 text-sm font-semibold text-primary transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
             >
-              <Phone className="h-4 w-4" />
+              <Phone className="h-4 w-4 transition-transform group-hover:rotate-12" />
               {business.phone}
             </a>
             <a

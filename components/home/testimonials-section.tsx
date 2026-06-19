@@ -62,7 +62,7 @@ export function TestimonialsSection() {
               className="mt-4 font-heading text-4xl font-light leading-tight md:text-5xl lg:text-6xl"
             >
               Loved by<br />
-              <span className="text-primary">our community</span>
+              <span className="text-gradient">our community</span>
             </motion.h2>
           </div>
 

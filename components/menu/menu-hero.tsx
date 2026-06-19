@@ -9,8 +9,8 @@ export function MenuHero() {
       {/* Background */}
       <div className="absolute inset-0">
         <Image
-          src="/images/photo_03.jpg"
-          alt="Chicken parm sub"
+          src="/images/menu_tacos.jpg"
+          alt="Authentic Mexican tacos at Mi Lupita's Kitchen"
           fill
           priority
           className="object-cover"

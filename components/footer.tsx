@@ -21,7 +21,7 @@ export function Footer() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-heading text-[clamp(4rem,20vw,16rem)] font-light leading-none tracking-tight text-foreground/5"
+          className="group cursor-default font-heading text-[clamp(4rem,20vw,16rem)] font-light leading-none tracking-tight text-foreground/5 transition-colors duration-700 hover:text-foreground/10"
         >
           Mi Lupita&apos;s
         </motion.div>
@@ -115,7 +115,7 @@ export function Footer() {
 
       {/* Copyright bar */}
       <div className="border-t border-border">
-        <div className="flex flex-col items-center justify-between gap-4 px-5 py-6 text-xs text-muted-foreground md:flex-row md:px-12 lg:px-20">
+        <div className="flex flex-col items-center justify-between gap-4 px-5 py-6 pb-28 text-xs text-muted-foreground md:flex-row md:px-12 md:pb-6 lg:px-20">
           <p>© {new Date().getFullYear()} {business.name}. All rights reserved.</p>
           <p>Red Bank, NJ · {business.rating}★ from {business.reviewCount} reviews</p>
         </div>

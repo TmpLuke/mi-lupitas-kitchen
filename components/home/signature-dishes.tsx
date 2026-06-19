@@ -63,7 +63,7 @@ export function SignatureDishes() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ delay: i * 0.12, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="group relative min-h-[420px] overflow-hidden md:min-h-[520px]"
+            className="shine group relative min-h-[420px] overflow-hidden rounded-sm md:min-h-[520px]"
           >
             <Image
               src={dish.img}

@@ -12,7 +12,7 @@ export function VisitSection() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/photo_16.jpg"
+          src="/images/interior_08.jpg"
           alt="Authentic Mexican food at Mi Lupita's Kitchen"
           fill
           className="object-cover"
@@ -40,7 +40,7 @@ export function VisitSection() {
             className="mt-6 font-heading text-4xl font-light leading-tight md:text-5xl lg:text-6xl"
           >
             Come hungry,<br />
-            <span className="text-primary">leave happy</span>
+            <span className="text-gradient">leave happy</span>
           </motion.h2>
 
           <motion.div
@@ -106,7 +106,7 @@ export function VisitSection() {
               href={business.directions}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-primary px-8 py-4 text-sm font-medium uppercase tracking-wider text-primary-foreground transition-all hover:bg-primary/90"
+              className="glow-hover tap-scale inline-flex items-center gap-3 bg-primary px-8 py-4 text-sm font-medium uppercase tracking-wider text-primary-foreground transition-all hover:bg-primary/90"
             >
               Get Directions
             </a>
@@ -120,15 +120,18 @@ export function VisitSection() {
         </div>
 
         {/* Right: Large typography */}
-        <div className="hidden items-center justify-center lg:flex">
+        <div className="relative hidden items-center justify-center lg:flex">
+          {/* Slow-spinning decorative ring */}
+          <div className="spin-slow pointer-events-none absolute size-[26rem] rounded-full border border-primary/15" />
+          <div className="spin-slow pointer-events-none absolute size-[20rem] rounded-full border border-dashed border-accent/15" style={{ animationDirection: 'reverse' }} />
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-center"
+            className="relative text-center"
           >
-            <div className="font-heading text-[10rem] font-light leading-none text-primary/20 xl:text-[14rem]">
+            <div className="float-bob font-heading text-[10rem] font-light leading-none text-gradient xl:text-[14rem]">
               M
             </div>
             <div className="-mt-8 font-heading text-2xl font-light tracking-[0.5em] text-foreground">

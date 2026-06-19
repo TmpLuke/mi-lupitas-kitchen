@@ -94,9 +94,27 @@
   }
   body {
     @apply bg-background text-foreground antialiased;
+    /* Smooth momentum scrolling + no horizontal overflow on mobile */
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
   }
   html {
     @apply font-sans scroll-smooth;
+    overflow-x: hidden;
+  }
+  /* Bigger, comfortable tap targets + no blue flash on mobile */
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
@@ -259,4 +277,188 @@
 ::selection {
   background: oklch(0.72 0.14 45 / 0.3);
   color: var(--foreground);
+}
+
+/* ============================================================
+   PREMIUM EFFECTS
+   ============================================================ */
+
+/* Animated gradient text — warm terracotta → gold shimmer */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.text-gradient {
+  background: linear-gradient(
+    100deg,
+    var(--primary) 0%,
+    var(--accent) 35%,
+    var(--primary) 70%,
+    var(--accent) 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradient-shift 6s ease infinite;
+}
+
+/* Shine sweep — runs across cards/images on hover (and once on view) */
+@keyframes shine-sweep {
+  0% { transform: translateX(-150%) skewX(-20deg); }
+  100% { transform: translateX(250%) skewX(-20deg); }
+}
+
+.shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.shine::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    oklch(1 0 0 / 0.18) 50%,
+    transparent 70%
+  );
+  transform: translateX(-150%) skewX(-20deg);
+}
+
+.shine:hover::after {
+  animation: shine-sweep 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Soft glow pulse for accents / badges */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 oklch(0.66 0.22 32 / 0.5); }
+  50% { box-shadow: 0 0 24px 4px oklch(0.66 0.22 32 / 0.35); }
+}
+
+.glow-pulse {
+  animation: glow-pulse 2.6s ease-in-out infinite;
+}
+
+/* Glow on hover for primary buttons */
+.glow-hover {
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.glow-hover:hover {
+  box-shadow: 0 8px 40px -6px oklch(0.66 0.22 32 / 0.55);
+}
+
+/* Floating bob */
+@keyframes float-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-bob {
+  animation: float-bob 5s ease-in-out infinite;
+}
+
+/* Slow continuous rotation (decorative rings) */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-slow {
+  animation: spin-slow 40s linear infinite;
+}
+
+/* Spotlight that follows pointer (set --x / --y via JS) */
+.spotlight {
+  position: relative;
+}
+
+.spotlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: radial-gradient(
+    400px circle at var(--x, 50%) var(--y, 50%),
+    oklch(0.66 0.22 32 / 0.12),
+    transparent 65%
+  );
+}
+
+.spotlight:hover::before {
+  opacity: 1;
+}
+
+/* Underline grow on hover */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1.5px;
+  width: 100%;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Gradient border card */
+.gradient-border {
+  position: relative;
+  background: var(--card);
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--primary), transparent 40%, transparent 60%, var(--accent));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gradient-border:hover::before {
+  opacity: 1;
+}
+
+/* Active tap scale for mobile buttons */
+.tap-scale {
+  transition: transform 0.15s ease;
+}
+
+.tap-scale:active {
+  transform: scale(0.95);
+}
+
+/* Hide scrollbar but keep scroll (mobile carousels) */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Safe-area padding for mobile devices with notches/home bars */
+.pb-safe {
+  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
 }

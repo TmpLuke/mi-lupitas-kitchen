@@ -5,6 +5,8 @@ import './globals.css'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { BackToTop } from '@/components/back-to-top'
+import { ScrollProgress } from '@/components/scroll-progress'
+import { MobileActionBar } from '@/components/mobile-action-bar'
 
 const playfair = Playfair_Display({
   variable: '--font-heading',
@@ -52,10 +54,12 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} scroll-smooth bg-background`}
     >
       <body className="font-sans antialiased">
+        <ScrollProgress />
         <Navbar />
         <main>{children}</main>
         <Footer />
         <BackToTop />
+        <MobileActionBar />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

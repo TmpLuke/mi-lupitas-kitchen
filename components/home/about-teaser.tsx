@@ -44,7 +44,7 @@ export function AboutTeaser() {
             The Lupita&apos;s Experience
           </p>
           <h2 className="mt-4 font-heading text-4xl font-light leading-tight md:text-5xl lg:text-6xl">
-            More than just great food
+            More than just <span className="text-gradient">great food</span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base text-muted-foreground">
             We&apos;re a family-run kitchen where every dish is made with love, every guest
@@ -74,8 +74,8 @@ export function AboutTeaser() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f, i) => (
             <Reveal key={f.label} delay={i * 0.08}>
-              <div className={`group h-full rounded-2xl border bg-card p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${f.accent}`}>
-                <span className={`flex size-13 items-center justify-center rounded-xl ${f.iconBg}`}>
+              <div className={`gradient-border group h-full rounded-2xl border bg-card p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${f.accent}`}>
+                <span className={`flex size-13 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6 ${f.iconBg}`}>
                   <f.icon width={26} height={26} />
                 </span>
                 <h3 className="mt-6 font-heading text-xl font-semibold leading-tight">

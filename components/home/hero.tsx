@@ -82,12 +82,12 @@ export function Hero() {
               Mi
             </motion.span>
             <motion.span
-              className="block overflow-hidden text-primary"
+              className="block overflow-hidden"
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
               transition={{ delay: 0.25, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
             >
-              Lupita&apos;s
+              <span className="text-gradient">Lupita&apos;s</span>
             </motion.span>
             <motion.span
               className="block overflow-hidden text-foreground/15"
@@ -117,14 +117,14 @@ export function Hero() {
           >
             <Link
               href="/menu"
-              className="group inline-flex items-center gap-3 bg-primary px-8 py-4 text-sm font-medium uppercase tracking-wider text-primary-foreground transition-all duration-300 hover:bg-primary/85 hover:gap-5"
+              className="glow-hover tap-scale group inline-flex items-center gap-3 bg-primary px-8 py-4 text-sm font-medium uppercase tracking-wider text-primary-foreground transition-all duration-300 hover:bg-primary/85 hover:gap-5"
             >
               <span>View Menu</span>
               <span className="transition-all duration-300">→</span>
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 border border-foreground/25 px-8 py-4 text-sm font-medium uppercase tracking-wider text-foreground backdrop-blur-sm transition-colors duration-300 hover:border-primary hover:text-primary"
+              className="tap-scale inline-flex items-center gap-3 border border-foreground/25 px-8 py-4 text-sm font-medium uppercase tracking-wider text-foreground backdrop-blur-sm transition-colors duration-300 hover:border-primary hover:text-primary"
             >
               Get Directions
             </Link>

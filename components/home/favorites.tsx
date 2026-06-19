@@ -16,7 +16,7 @@ export function Favorites() {
               Most Loved
             </p>
             <h2 className="mt-3 text-balance font-heading text-3xl font-bold sm:text-4xl lg:text-5xl">
-              Customer favorites
+              Customer <span className="text-gradient">favorites</span>
             </h2>
             <p className="mt-3 max-w-md text-pretty text-muted-foreground">
               The dishes our regulars rave about, straight from the reviews.
@@ -41,9 +41,9 @@ export function Favorites() {
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-                className="group h-full overflow-hidden rounded-3xl border border-border bg-card shadow-sm"
+                className="tap-scale group h-full overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-shadow duration-300 hover:shadow-xl hover:shadow-primary/10"
               >
-                <div className="relative aspect-[5/4] overflow-hidden">
+                <div className="shine relative aspect-[5/4] overflow-hidden">
                   <img
                     src={f.img || '/placeholder.svg'}
                     alt={f.name}
