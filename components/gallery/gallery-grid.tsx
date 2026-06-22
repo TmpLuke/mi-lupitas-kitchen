@@ -51,7 +51,7 @@ export function GalleryGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.6, delay: (i % 3) * 0.1 }}
-              className={`image-zoom group relative overflow-hidden ${
+              className={`image-zoom shine tap-scale group relative overflow-hidden rounded-xl ${
                 isLarge ? 'md:row-span-2' : isMedium ? 'md:col-span-2' : ''
               }`}
               style={{ aspectRatio: isLarge ? '3/4' : isMedium ? '16/9' : '4/3' }}
@@ -87,16 +87,16 @@ export function GalleryGrid() {
             <button
               onClick={close}
               aria-label="Close"
-              className="absolute right-5 top-5 flex h-12 w-12 items-center justify-center border border-border text-foreground transition-colors hover:border-primary hover:text-primary"
+              className="tap-scale absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background/60 text-foreground backdrop-blur transition-colors hover:border-primary hover:text-primary"
             >
               <X className="h-5 w-5" />
             </button>
 
-            {/* Navigation */}
+            {/* Navigation — hidden on small screens (swipe instead) */}
             <button
               onClick={(e) => { e.stopPropagation(); prev() }}
               aria-label="Previous"
-              className="absolute left-5 flex h-12 w-12 items-center justify-center border border-border text-foreground transition-colors hover:border-primary hover:text-primary"
+              className="tap-scale absolute left-4 z-10 hidden h-12 w-12 items-center justify-center rounded-full border border-border bg-background/60 text-foreground backdrop-blur transition-colors hover:border-primary hover:text-primary sm:flex"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -104,33 +104,44 @@ export function GalleryGrid() {
             <button
               onClick={(e) => { e.stopPropagation(); next() }}
               aria-label="Next"
-              className="absolute right-5 flex h-12 w-12 items-center justify-center border border-border text-foreground transition-colors hover:border-primary hover:text-primary"
+              className="tap-scale absolute right-4 z-10 hidden h-12 w-12 items-center justify-center rounded-full border border-border bg-background/60 text-foreground backdrop-blur transition-colors hover:border-primary hover:text-primary sm:flex"
             >
               <ChevronRight className="h-5 w-5" />
             </button>
 
-            {/* Image */}
+            {/* Image — drag to swipe on touch devices */}
             <motion.figure
               key={index}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}
-              className="max-h-[85vh] max-w-5xl px-20"
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.7}
+              onDragEnd={(_, info) => {
+                if (info.offset.x < -80) next()
+                else if (info.offset.x > 80) prev()
+              }}
+              className="max-h-[85vh] max-w-5xl cursor-grab px-4 active:cursor-grabbing sm:px-20"
             >
               <Image
                 src={photos[index].src}
                 alt={photos[index].alt}
                 width={1200}
                 height={800}
-                className="max-h-[75vh] w-auto object-contain"
+                draggable={false}
+                className="pointer-events-none max-h-[72vh] w-auto select-none object-contain"
               />
-              <figcaption className="mt-6 text-center">
+              <figcaption className="mt-5 text-center">
                 <span className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
                   {index + 1} / {photos.length}
                 </span>
-                <p className="mt-2 font-heading text-lg font-light text-foreground">
+                <p className="mt-2 font-heading text-base font-light text-foreground md:text-lg">
                   {photos[index].alt}
+                </p>
+                <p className="mt-2 text-xs text-muted-foreground sm:hidden">
+                  Swipe to browse
                 </p>
               </figcaption>
             </motion.figure>

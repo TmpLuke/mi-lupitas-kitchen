@@ -59,12 +59,12 @@ export function ContactForm() {
               rows={5}
               required
               placeholder="How can we help?"
-              className="w-full resize-none border border-border bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary"
+              className="w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-base outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20 md:text-sm"
             />
           </div>
           <button
             type="submit"
-            className="inline-flex w-full items-center justify-center gap-3 bg-primary px-8 py-4 text-sm font-medium uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90"
+            className="glow-hover tap-scale inline-flex w-full items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-sm font-medium uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90"
           >
             <Send className="h-4 w-4" />
             Send Message
@@ -99,7 +99,7 @@ function Field({
         type={type}
         required={required}
         placeholder={placeholder}
-        className="w-full border border-border bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary"
+        className="w-full rounded-xl border border-border bg-background px-4 py-3 text-base outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20 md:text-sm"
       />
     </div>
   )

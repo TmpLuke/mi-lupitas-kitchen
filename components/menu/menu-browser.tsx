@@ -42,12 +42,12 @@ export function MenuBrowser() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search dishes..."
-            className="w-full border border-border bg-card py-3 pl-11 pr-11 text-sm outline-none transition-all focus:border-primary"
+            className="w-full rounded-full border border-border bg-card py-3 pl-11 pr-11 text-base outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20 md:text-sm"
           />
           {query && (
             <button
               onClick={() => setQuery('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+              className="tap-scale absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
               aria-label="Clear search"
             >
               <X className="h-4 w-4" />
@@ -55,14 +55,21 @@ export function MenuBrowser() {
           )}
         </div>
 
+        {/* Live result count when searching */}
+        {query && (
+          <p className="mb-4 text-xs text-muted-foreground">
+            {totalResults} result{totalResults !== 1 ? 's' : ''} for &ldquo;{query}&rdquo;
+          </p>
+        )}
+
         {/* Category tabs */}
-        <div className="flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="no-scrollbar flex gap-2 overflow-x-auto">
           {categories.map((c) => (
             <button
               key={c}
               onClick={() => setActive(c)}
               className={cn(
-                'relative shrink-0 px-4 py-2 text-xs font-medium uppercase tracking-wider transition-colors',
+                'tap-scale relative shrink-0 rounded-full px-4 py-2 text-xs font-medium uppercase tracking-wider transition-colors',
                 active === c
                   ? 'text-primary-foreground'
                   : 'text-muted-foreground hover:text-foreground',
@@ -71,7 +78,7 @@ export function MenuBrowser() {
               {active === c && (
                 <motion.span
                   layoutId="menu-tab"
-                  className="absolute inset-0 bg-primary"
+                  className="absolute inset-0 rounded-full bg-primary"
                   transition={{ type: 'spring', stiffness: 400, damping: 35 }}
                 />
               )}
