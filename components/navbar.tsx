@@ -49,7 +49,7 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          'fixed inset-x-0 top-0 z-50 transition-all duration-500',
+          'fixed inset-x-0 top-0 z-[60] transition-all duration-500',
           scrolled ? 'bg-background/90 backdrop-blur-xl' : 'bg-transparent',
         )}
       >
@@ -101,10 +101,9 @@ export function Navbar() {
             <CartButton />
           </div>
 
-          {/* Mobile: cart + order + menu toggle */}
+          {/* Mobile: cart + menu toggle (the bottom action bar carries "Order") */}
           <div className="flex items-center gap-1 lg:hidden">
             <CartButton />
-            <OrderButton className="px-4 py-2" />
           <button
             onClick={() => setOpen((v) => !v)}
             className="relative z-10 flex h-10 w-10 items-center justify-center"
@@ -146,7 +145,7 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-background lg:hidden"
+            className="fixed inset-0 z-[55] bg-background lg:hidden"
           >
             <div className="flex h-full flex-col justify-between px-5 pb-12 pt-24">
               <nav className="flex flex-col">
@@ -176,17 +175,23 @@ export function Navbar() {
                 transition={{ delay: 0.5 }}
                 className="space-y-4"
               >
+                <Link
+                  href="/menu"
+                  className="tap-scale flex w-full items-center justify-center gap-3 rounded-full bg-primary py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground"
+                >
+                  Order Online
+                </Link>
                 <a
                   href={business.directions}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex w-full items-center justify-center gap-3 bg-primary py-4 text-sm font-medium uppercase tracking-wider text-primary-foreground"
+                  className="tap-scale flex w-full items-center justify-center gap-3 rounded-full border border-border py-4 text-sm font-medium uppercase tracking-wider text-foreground"
                 >
                   Get Directions
                 </a>
                 <a
                   href={`tel:${business.phone}`}
-                  className="flex w-full items-center justify-center gap-3 border border-border py-4 text-sm font-medium uppercase tracking-wider text-foreground"
+                  className="tap-scale flex w-full items-center justify-center gap-3 rounded-full border border-border py-4 text-sm font-medium uppercase tracking-wider text-foreground"
                 >
                   Call {business.phone}
                 </a>
