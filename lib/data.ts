@@ -18,47 +18,6 @@ export const business = {
   facebook: 'https://www.facebook.com/MiLupitaskitchen/',
 }
 
-/**
- * Online ordering options.
- * ── HOW TO ADD A REAL ORDERING SERVICE ──
- * When you sign up for DoorDash / Uber Eats / Grubhub / Toast / ChowNow, just
- * paste your restaurant's link below as a new entry (or fill in the `href` of an
- * existing one) and set `enabled: true`. It will instantly appear in the
- * "Order Online" popup across the whole site. No other code changes needed.
- */
-export const ordering = {
-  // We have a real online-ordering system (cart + pickup/delivery + checkout)
-  // hosted on Current LVL.
-  hasOnlineOrdering: true,
-  // Direct link to the live ordering page (NOT the plain menu page).
-  orderUrl: 'https://milupitaskitchen.currentlvl.com/restaurant/order-online-30342.html',
-  options: [
-    {
-      id: 'online',
-      label: 'Order Online',
-      desc: 'Add to cart, pick up or get it delivered.',
-      href: 'https://milupitaskitchen.currentlvl.com/restaurant/order-online-30342.html',
-      kind: 'delivery' as const,
-      enabled: true,
-    },
-    {
-      id: 'call',
-      label: 'Call to Order',
-      desc: 'Prefer to talk? We’ll have it ready for pickup.',
-      href: 'tel:+17328670019',
-      kind: 'phone' as const,
-      enabled: true,
-    },
-    {
-      id: 'menu',
-      label: 'Browse Our Menu',
-      desc: 'See everything we make before you order.',
-      href: 'https://milupitaskitchen.currentlvl.com/',
-      kind: 'menu' as const,
-      enabled: true,
-    },
-  ],
-}
 
 export const hours = [
   { day: 'Monday', open: null, close: null, dow: 1 },

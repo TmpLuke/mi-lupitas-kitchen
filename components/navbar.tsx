@@ -4,10 +4,9 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Phone } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { business } from '@/lib/data'
-import { OrderButton, CartButton } from '@/components/order-online'
 
 const links = [
   { href: '/', label: 'Home' },
@@ -97,13 +96,17 @@ export function Navbar() {
             >
               Visit Us
             </a>
-            <OrderButton />
-            <CartButton />
+            <a
+              href={business.phoneHref}
+              className="glow-hover tap-scale inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-primary-foreground transition-all hover:bg-primary/90"
+            >
+              <Phone className="h-4 w-4" />
+              Call to Order
+            </a>
           </div>
 
-          {/* Mobile: cart + menu toggle (the bottom action bar carries "Order") */}
+          {/* Mobile: menu toggle */}
           <div className="flex items-center gap-1 lg:hidden">
-            <CartButton />
           <button
             onClick={() => setOpen((v) => !v)}
             className="relative z-10 flex h-10 w-10 items-center justify-center"
@@ -175,12 +178,13 @@ export function Navbar() {
                 transition={{ delay: 0.5 }}
                 className="space-y-4"
               >
-                <Link
-                  href="/menu"
+                <a
+                  href={business.phoneHref}
                   className="tap-scale flex w-full items-center justify-center gap-3 rounded-full bg-primary py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground"
                 >
-                  Order Online
-                </Link>
+                  <Phone className="h-4 w-4" />
+                  Call to Order
+                </a>
                 <a
                   href={business.directions}
                   target="_blank"
@@ -188,12 +192,6 @@ export function Navbar() {
                   className="tap-scale flex w-full items-center justify-center gap-3 rounded-full border border-border py-4 text-sm font-medium uppercase tracking-wider text-foreground"
                 >
                   Get Directions
-                </a>
-                <a
-                  href={`tel:${business.phone}`}
-                  className="tap-scale flex w-full items-center justify-center gap-3 rounded-full border border-border py-4 text-sm font-medium uppercase tracking-wider text-foreground"
-                >
-                  Call {business.phone}
                 </a>
               </motion.div>
             </div>
