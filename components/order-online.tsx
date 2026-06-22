@@ -68,7 +68,7 @@ function OrderDialog({ open, onClose }: { open: boolean; onClose: () => void }) 
             <div className="mt-7 space-y-3">
               {options.map((o, i) => {
                 const Icon = iconFor[o.kind]
-                const isPrimary = o.kind === 'phone'
+                const isPrimary = i === 0
                 return (
                   <motion.a
                     key={o.id}

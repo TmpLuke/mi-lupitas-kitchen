@@ -27,14 +27,24 @@ export const business = {
  * "Order Online" popup across the whole site. No other code changes needed.
  */
 export const ordering = {
-  // Set to true once you have at least one real online-ordering link.
-  // While false, the popup highlights calling to order + browsing the menu.
-  hasOnlineOrdering: false,
+  // We have a real online-ordering system (cart + pickup/delivery + checkout)
+  // hosted on Current LVL.
+  hasOnlineOrdering: true,
+  // Direct link to the live ordering page (NOT the plain menu page).
+  orderUrl: 'https://milupitaskitchen.currentlvl.com/restaurant/order-online-30342.html',
   options: [
+    {
+      id: 'online',
+      label: 'Order Online',
+      desc: 'Add to cart, pick up or get it delivered.',
+      href: 'https://milupitaskitchen.currentlvl.com/restaurant/order-online-30342.html',
+      kind: 'delivery' as const,
+      enabled: true,
+    },
     {
       id: 'call',
       label: 'Call to Order',
-      desc: 'Quickest way — we’ll have it ready for pickup.',
+      desc: 'Prefer to talk? We’ll have it ready for pickup.',
       href: 'tel:+17328670019',
       kind: 'phone' as const,
       enabled: true,
@@ -42,27 +52,10 @@ export const ordering = {
     {
       id: 'menu',
       label: 'Browse Our Menu',
-      desc: 'See everything we make, then call to order.',
+      desc: 'See everything we make before you order.',
       href: 'https://milupitaskitchen.currentlvl.com/',
       kind: 'menu' as const,
       enabled: true,
-    },
-    // ── Paste real links here when ready, then flip enabled to true ──
-    {
-      id: 'doordash',
-      label: 'DoorDash',
-      desc: 'Delivery to your door.',
-      href: '', // e.g. https://www.doordash.com/store/your-store
-      kind: 'delivery' as const,
-      enabled: false,
-    },
-    {
-      id: 'ubereats',
-      label: 'Uber Eats',
-      desc: 'Delivery to your door.',
-      href: '', // e.g. https://www.ubereats.com/store/your-store
-      kind: 'delivery' as const,
-      enabled: false,
     },
   ],
 }
