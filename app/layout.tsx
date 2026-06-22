@@ -7,6 +7,8 @@ import { Footer } from '@/components/footer'
 import { BackToTop } from '@/components/back-to-top'
 import { ScrollProgress } from '@/components/scroll-progress'
 import { MobileActionBar } from '@/components/mobile-action-bar'
+import { CartProvider } from '@/components/cart/cart-provider'
+import { CartDrawer } from '@/components/cart/cart-drawer'
 
 const playfair = Playfair_Display({
   variable: '--font-heading',
@@ -54,12 +56,15 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} scroll-smooth bg-background`}
     >
       <body className="font-sans antialiased">
-        <ScrollProgress />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <BackToTop />
-        <MobileActionBar />
+        <CartProvider>
+          <ScrollProgress />
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+          <BackToTop />
+          <MobileActionBar />
+          <CartDrawer />
+        </CartProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

@@ -2,9 +2,10 @@
 
 import { useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Search, X } from 'lucide-react'
+import { Search, X, Plus, Check } from 'lucide-react'
 import { menu } from '@/lib/data'
 import { cn } from '@/lib/utils'
+import { useCart, parsePrice } from '@/components/cart/cart-provider'
 
 export function MenuBrowser() {
   const [active, setActive] = useState('All')
@@ -144,9 +145,12 @@ export function MenuBrowser() {
                           </p>
                         )}
                       </div>
-                      <span className="shrink-0 font-heading text-lg font-light text-primary">
-                        {item.price}
-                      </span>
+                      <div className="flex shrink-0 flex-col items-end gap-2">
+                        <span className="font-heading text-lg font-light text-primary">
+                          {item.price}
+                        </span>
+                        <AddButton name={item.name} price={parsePrice(item.price)} />
+                      </div>
                     </motion.div>
                   ))}
                 </div>
@@ -156,5 +160,39 @@ export function MenuBrowser() {
         </div>
       )}
     </section>
+  )
+}
+
+function AddButton({ name, price }: { name: string; price: number }) {
+  const { add, setOpen } = useCart()
+  const [added, setAdded] = useState(false)
+
+  function handleAdd() {
+    add(name, price)
+    setAdded(true)
+    setTimeout(() => setAdded(false), 1100)
+  }
+
+  return (
+    <button
+      onClick={handleAdd}
+      aria-label={`Add ${name} to order`}
+      className={cn(
+        'tap-scale inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold uppercase tracking-wider transition-all',
+        added
+          ? 'bg-primary text-primary-foreground'
+          : 'border border-border text-muted-foreground hover:border-primary hover:text-primary',
+      )}
+    >
+      {added ? (
+        <>
+          <Check className="h-3.5 w-3.5" /> Added
+        </>
+      ) : (
+        <>
+          <Plus className="h-3.5 w-3.5" /> Add
+        </>
+      )}
+    </button>
   )
 }

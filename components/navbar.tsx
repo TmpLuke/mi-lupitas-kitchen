@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { business } from '@/lib/data'
-import { OrderButton } from '@/components/order-online'
+import { OrderButton, CartButton } from '@/components/order-online'
 
 const links = [
   { href: '/', label: 'Home' },
@@ -98,10 +98,12 @@ export function Navbar() {
               Visit Us
             </a>
             <OrderButton />
+            <CartButton />
           </div>
 
-          {/* Mobile: order button + menu toggle */}
-          <div className="flex items-center gap-2 lg:hidden">
+          {/* Mobile: cart + order + menu toggle */}
+          <div className="flex items-center gap-1 lg:hidden">
+            <CartButton />
             <OrderButton className="px-4 py-2" />
           <button
             onClick={() => setOpen((v) => !v)}

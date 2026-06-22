@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Phone, Navigation, ShoppingBag } from 'lucide-react'
-import { business, ordering } from '@/lib/data'
+import { business } from '@/lib/data'
 
 export function MobileActionBar() {
   const [show, setShow] = useState(false)
@@ -47,16 +47,14 @@ export function MobileActionBar() {
               <span className="text-[10px] font-semibold uppercase tracking-wider">Directions</span>
             </a>
 
-            <a
-              href={ordering.orderUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/menu"
               className="tap-scale flex flex-[1.4] flex-col items-center justify-center gap-1 rounded-xl bg-primary py-2.5 text-primary-foreground"
               aria-label="Order online"
             >
               <ShoppingBag className="h-5 w-5" />
               <span className="text-[10px] font-semibold uppercase tracking-wider">Order</span>
-            </a>
+            </Link>
           </div>
         </motion.div>
       )}
