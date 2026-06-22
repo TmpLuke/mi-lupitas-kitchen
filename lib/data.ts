@@ -18,6 +18,55 @@ export const business = {
   facebook: 'https://www.facebook.com/MiLupitaskitchen/',
 }
 
+/**
+ * Online ordering options.
+ * ── HOW TO ADD A REAL ORDERING SERVICE ──
+ * When you sign up for DoorDash / Uber Eats / Grubhub / Toast / ChowNow, just
+ * paste your restaurant's link below as a new entry (or fill in the `href` of an
+ * existing one) and set `enabled: true`. It will instantly appear in the
+ * "Order Online" popup across the whole site. No other code changes needed.
+ */
+export const ordering = {
+  // Set to true once you have at least one real online-ordering link.
+  // While false, the popup highlights calling to order + browsing the menu.
+  hasOnlineOrdering: false,
+  options: [
+    {
+      id: 'call',
+      label: 'Call to Order',
+      desc: 'Quickest way — we’ll have it ready for pickup.',
+      href: 'tel:+17328670019',
+      kind: 'phone' as const,
+      enabled: true,
+    },
+    {
+      id: 'menu',
+      label: 'Browse Our Menu',
+      desc: 'See everything we make, then call to order.',
+      href: 'https://milupitaskitchen.currentlvl.com/',
+      kind: 'menu' as const,
+      enabled: true,
+    },
+    // ── Paste real links here when ready, then flip enabled to true ──
+    {
+      id: 'doordash',
+      label: 'DoorDash',
+      desc: 'Delivery to your door.',
+      href: '', // e.g. https://www.doordash.com/store/your-store
+      kind: 'delivery' as const,
+      enabled: false,
+    },
+    {
+      id: 'ubereats',
+      label: 'Uber Eats',
+      desc: 'Delivery to your door.',
+      href: '', // e.g. https://www.ubereats.com/store/your-store
+      kind: 'delivery' as const,
+      enabled: false,
+    },
+  ],
+}
+
 export const hours = [
   { day: 'Monday', open: null, close: null, dow: 1 },
   { day: 'Tuesday', open: '10:00 AM', close: '10:00 PM', dow: 2 },

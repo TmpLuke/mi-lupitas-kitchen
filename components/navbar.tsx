@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { business } from '@/lib/data'
+import { OrderButton } from '@/components/order-online'
 
 const links = [
   { href: '/', label: 'Home' },
@@ -87,19 +88,24 @@ export function Navbar() {
           </div>
 
           {/* Desktop CTA */}
-          <a
-            href={business.directions}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden border border-border px-6 py-2.5 text-xs font-medium uppercase tracking-wider text-foreground transition-colors hover:border-primary hover:text-primary lg:inline-flex"
-          >
-            Visit Us
-          </a>
+          <div className="hidden items-center gap-3 lg:flex">
+            <a
+              href={business.directions}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-border px-6 py-2.5 text-xs font-medium uppercase tracking-wider text-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              Visit Us
+            </a>
+            <OrderButton />
+          </div>
 
-          {/* Mobile menu toggle */}
+          {/* Mobile: order button + menu toggle */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <OrderButton className="px-4 py-2" />
           <button
             onClick={() => setOpen((v) => !v)}
-            className="relative z-10 flex h-10 w-10 items-center justify-center lg:hidden"
+            className="relative z-10 flex h-10 w-10 items-center justify-center"
             aria-label="Toggle menu"
           >
             <div className="relative h-4 w-6">
@@ -117,6 +123,7 @@ export function Navbar() {
               />
             </div>
           </button>
+          </div>
         </nav>
 
         {/* Scroll progress line */}
