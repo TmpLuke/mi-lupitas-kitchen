@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Search, X } from 'lucide-react'
-import { menu } from '@/lib/data'
+import { menu, menuAdvisory } from '@/lib/data'
 import { cn } from '@/lib/utils'
 
 export function MenuBrowser() {
@@ -155,6 +155,10 @@ export function MenuBrowser() {
           </AnimatePresence>
         </div>
       )}
+
+      <p className="mx-auto mt-16 max-w-2xl text-center text-xs italic leading-relaxed text-muted-foreground">
+        {menuAdvisory}
+      </p>
     </section>
   )
 }

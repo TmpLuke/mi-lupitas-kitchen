@@ -23,7 +23,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Mi Lupita's Kitchen | Authentic Mexican Restaurant in Red Bank, NJ",
   description:
-    "Mi Lupita's Kitchen serves authentic Mexican food in Red Bank, NJ — handmade tortillas, birria tacos, enchiladas, fajitas, and more. Rated 4.8 stars from 446 reviews. BYOB & outdoor seating.",
+    "Mi Lupita's Kitchen serves authentic Mexican street food in Red Bank, NJ — handmade tortillas, birria tacos, enchiladas, molcajete, and more. Rated 4.8 stars from 446 reviews. BYOB & outdoor seating.",
   generator: 'v0.app',
   keywords: [
     'Mexican restaurant',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mi Lupita's Kitchen | Authentic Mexican Food in Red Bank, NJ",
     description:
-      "Handmade tortillas, birria tacos, sizzling fajitas and fresh Mexican flavors in Red Bank, NJ. BYOB & outdoor seating available.",
+      "Handmade tortillas, birria tacos, molcajete and fresh Mexican street food in Red Bank, NJ. BYOB & outdoor seating available.",
     type: 'website',
   },
 }

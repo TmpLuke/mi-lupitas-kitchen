@@ -42,7 +42,7 @@ export function MenuHero() {
           transition={{ delay: 0.5 }}
           className="mt-4 max-w-lg text-base text-muted-foreground md:text-lg"
         >
-          From golden empanadas to hearty combos and homemade desserts — something for every craving.
+          From street-side antojitos to sizzling molcajetes and birria — authentic Mexican street food for every craving.
         </motion.p>
       </div>
     </section>

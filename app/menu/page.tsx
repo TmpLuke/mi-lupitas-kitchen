@@ -5,7 +5,7 @@ import { MenuHero } from '@/components/menu/menu-hero'
 export const metadata: Metadata = {
   title: "Menu | Mi Lupita's Kitchen",
   description:
-    "Browse the full Mi Lupita's Kitchen menu — birria tacos, enchiladas, sizzling fajitas, burritos, quesadillas, parrilladas and more. Authentic Mexican food in Red Bank, NJ.",
+    "Browse the full Mi Lupita's Kitchen menu — birria tacos, enchiladas, molcajete, burritos, quesadillas, tortas and more. Authentic Mexican street food in Red Bank, NJ.",
 }
 
 export default function MenuPage() {

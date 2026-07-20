@@ -36,8 +36,8 @@ export function Footer() {
               Lupita&apos;s<span className="text-primary">.</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Authentic Mexican flavors in Red Bank, NJ — handmade tortillas, sizzling fajitas,
-              birria tacos and more. BYOB welcome.
+              Authentic Mexican street food in Red Bank, NJ — handmade tortillas, birria tacos,
+              molcajete and more. BYOB welcome.
             </p>
             <div className="mt-6 flex gap-3">
               <a
