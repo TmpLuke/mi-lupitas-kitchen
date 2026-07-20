@@ -4,16 +4,16 @@ export const business = {
   priceLevel: '$',
   rating: 4.8,
   reviewCount: 446,
-  address: '78 Bridge Ave, Red Bank, NJ 07701',
+  address: '193 Shrewsbury Ave, Red Bank, NJ 07701',
   phone: '(732) 867-0019',
   phoneHref: 'tel:+17328670019',
   website: 'https://milupitaskitchen.currentlvl.com/',
   menuSource: 'https://milupitaskitchen.currentlvl.com/',
   serviceOptions: ['Dine In', 'Takeout', 'Delivery', 'Outdoor Seating', 'Catering'],
   directions:
-    'https://www.google.com/maps/dir/?api=1&destination=78%20Bridge%20Ave%2C%20Red%20Bank%2C%20NJ%2007701',
+    'https://www.google.com/maps/dir/?api=1&destination=193%20Shrewsbury%20Ave%2C%20Red%20Bank%2C%20NJ%2007701',
   mapEmbed:
-    'https://maps.google.com/maps?q=78%20Bridge%20Ave%2C%20Red%20Bank%2C%20NJ%2007701&z=16&output=embed',
+    'https://maps.google.com/maps?q=193%20Shrewsbury%20Ave%2C%20Red%20Bank%2C%20NJ%2007701&z=16&output=embed',
   instagram: 'https://www.instagram.com/milupitaskitchen/',
   facebook: 'https://www.facebook.com/MiLupitaskitchen/',
 }
